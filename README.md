@@ -8,10 +8,10 @@ _Build 1.0_
 `cd {Hacker News directory folder}`
 
 _For Pip2_
-`pip install setup.py`
+`pip install -r requirements.txt`
 
 _For Pip3_
-`pip3 install setup.py`
+`pip3 install -r requirements.txt`
 
 #### MongoDB
 _Official MongoDB Installtion Guide_
