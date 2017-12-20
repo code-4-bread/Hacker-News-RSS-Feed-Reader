@@ -7,6 +7,9 @@ test.py
 #python cache
 **/__pycache__
 
+#venv
+/venv
+
 #misc
 /.idea
 .DS_Store
