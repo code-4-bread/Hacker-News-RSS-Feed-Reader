@@ -1,10 +1,10 @@
 import feedparser, datetime, schedule, webbrowser, threading
 from pymongo import MongoClient
 
-
+#Connect To Your Mongo DB
 client = MongoClient()
-db = client.HKN
-collection = db.NewsCollection
+db = client.{DataBaseName}
+collection = db.{CollectionName}
 
 def spooler():
     thread = threading.Thread(target=fetch_update_15, args=())
