@@ -1,0 +1,11 @@
+#git files
+.gitattributes
+
+#test file
+test.py
+
+#python cache
+/__pycache__
+
+#misc
+/.idea
