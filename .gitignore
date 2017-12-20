@@ -5,7 +5,8 @@
 test.py
 
 #python cache
-/__pycache__
+**/__pycache__
 
 #misc
 /.idea
+.DS_Store
