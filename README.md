@@ -1,16 +1,18 @@
 # Hacker News RSS Feed Reader 
 _Build 1.0_
 
-### **Setup Instructions**
+## **Setup Instructions**
 ---
-#### Virtual Env
-_Change Directory into Hacker News Feed Reader_
+#### Install Dependencies
 
-`cd {directory}`
+`cd {Hacker News directory folder}`
 
-_Type this command to Activate the Virtual Environment_
+_For Pip2_
+`pip install setup.py`
 
-`source venv/bin/activate`
+_For Pip3_
+`pip3 install setup.py`
+
 #### MongoDB
 _Official MongoDB Installtion Guide_
 
@@ -33,11 +35,10 @@ Change `{CollectionName}` to your MongoDB Collection Name
 
 #### Running the script
 
-While venv is activated, run `main.py` file.
+Run `main.py` file.
 
+## **Features**
 ---
-
-### **Features**
 * **Fetch Articles from Hacker News RSS Feed & Store in Mongo DB**
 * **List Articles by ID**
 * **View Individual Articles**
