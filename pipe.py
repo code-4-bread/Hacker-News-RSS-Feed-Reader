@@ -2,9 +2,9 @@ import feedparser, datetime, schedule, webbrowser, threading
 from pymongo import MongoClient
 
 #Connect To Your Mongo DB
-client = MongoClient()
-db = client.{DataBaseName}
-collection = db.{CollectionName}
+client = MongoClient('localhost', 27017)
+db = client.hackernews
+collection = db.news
 
 def spooler():
     thread = threading.Thread(target=fetch_update_15, args=())
@@ -38,7 +38,7 @@ def open_in_browser(url):
     webbrowser.open_new_tab(url)
 
 def doc_viewsingle(id):
-    exist = collection.count({'id': int(id)})
+    exist = collection.count_documents({'id': int(id)})
     print(exist)
     if exist == 0:
         print("Record Doesn't Exist")
@@ -83,8 +83,8 @@ def fetch_update():
     url = 'https://news.ycombinator.com/rss'
     feed = feedparser.parse(url)
     for item in feed['items']:
-        count = collection.count()
-        if collection.count({'title': item['title']}) == 0:
+        count = collection.estimated_document_count()
+        if collection.count_documents({'title': item['title']}) == 0:
             count += 1
             collection.insert_one({
                 'id' : count,
