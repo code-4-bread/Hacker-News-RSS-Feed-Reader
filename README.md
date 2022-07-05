@@ -22,17 +22,6 @@ _Official MongoDB Installtion Guide_
 
 <a href="https://docs.mongodb.com/manual/administration/install-enterprise-linux/">Linux</a>
 
-#### Configure Script with MongoDB
-
-Search for `#Connect To Your Mongo DB` in `pipe.py`
-
-
-Change `{DataBaseName}` to your MongoDB Database Name
-Change `{CollectionName}` to your MongoDB Collection Name
-`client = MongoClient()`
-`db = client.{DataBaseName}`
-`collection = db.{CollectionName}`
-
 #### Running the script
 
 Run `main.py` file.
